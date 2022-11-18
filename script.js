@@ -28,24 +28,22 @@ function myFunction() {
 
   if(phoneNumber && code && showError) {
     if(phoneNumber.value.trim() == "" || code.value.trim() == "") {
-      showError.innerHTML = "<span class='text-danger' >Vui lòng nhập thông tin!</span>";
+      showError.innerHTML = "<span class='text-danger' >Vui lòng nhập thông tin nhé!</span>";
       return
     }
     if(code.value.trim() === "mpm97") {
       showError.innerHTML = "<span class='text-danger' >Mã phần mềm này không hỗ trợ trên điện thoại, máy tính của bản. Mời nâng cấp gói phần mềm khác!</span>";
       return
     }
-    if(code.value.trim() !== "mpm97"){
+    if(code.value.trim() !== "quang123" && code.value.trim() !== "mpm97"){
       showError.innerHTML = "<span class='text-danger' >Mã phần mềm này không đúng!</span>";
       return
     }
-    if(code.value.trim() !== "quang123") {
-      return
-    }
-    progress();
-    setTimeout(function () {
-      window.location.href = "https://zalo.me";
-    }, 2500);
+      showError.innerHTML = "";
+      progress();
+      setTimeout(function () {
+        window.location.href = "https://zalo.me";
+      }, 2500);
   }
   //window.location.href = "fb://page/300881516665819/reviews";
 }
