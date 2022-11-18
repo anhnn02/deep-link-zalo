@@ -35,7 +35,7 @@ function myFunction() {
       showError.innerHTML = "<span class='text-danger' >Mã phần mềm này không hỗ trợ trên điện thoại, máy tính của bản. Mời nâng cấp gói phần mềm khác!</span>";
       return
     }
-    if(code.value.trim() !== "quang123" || code.value.trim() !== "mpm97"){
+    if(code.value.trim() !== "mpm97"){
       showError.innerHTML = "<span class='text-danger' >Mã phần mềm này không đúng!</span>";
       return
     }
