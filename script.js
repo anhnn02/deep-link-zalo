@@ -12,6 +12,7 @@ function progress(){
       percent.classList.add("text-blink");
       text.style.display = "inline-block";
       clearInterval(loading);
+      loading.style.display = 'none'
     }else{
       per = per + 1;
       count = count + 1;
