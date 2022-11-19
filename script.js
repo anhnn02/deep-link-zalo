@@ -46,7 +46,7 @@ function myFunction() {
         window.location.href = "https://zalo.me";
         phoneNumber.value =""
         code.value =""
-        loadingLine.style.display = 'inline-block'
+        loadingLine.style.display = 'none'
       }, 2500);
   }
 }
