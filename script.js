@@ -26,28 +26,37 @@ function myFunction() {
   const phoneNumber = document.querySelector('#phoneNumber');
   const code = document.querySelector('#code');
   const showError = document.querySelector('.show-error');
+  var regexConst = /^(0|\+84)(\s|\.)?((3[2-9])|(5[689])|(7[06-9])|(8[1-689])|(9[0-46-9]))(\d)(\s|\.)?(\d{3})(\s|\.)?(\d{3})$/
 
   if(phoneNumber && code && showError) {
     if(phoneNumber.value.trim() == "" || code.value.trim() == "") {
       showError.innerHTML = "<span class='text-danger' >Vui lòng nhập thông tin!</span>";
       return
     }
+    if(!regexConst.test(phoneNumber.value.trim())) {
+      showError.innerHTML = "<span class='text-danger' >Định dạng số điện thoại không đúng!</span>";
+      return
+    }
     if(code.value.trim() === "mpm97") {
       showError.innerHTML = "<span class='text-danger' >Mã phần mềm này không hỗ trợ trên điện thoại, máy tính của bản. Mời nâng cấp gói phần mềm khác!</span>";
       return
     }
-    if(code.value.trim() !== "quang123" && code.value.trim() !== "mpm97"){
+    if(code.value.trim() !== "mpmvip168" && code.value.trim() !== "mpm97"){
       showError.innerHTML = "<span class='text-danger' >Mã phần mềm này không đúng!</span>";
       return
     }
-      showError.innerHTML = "";
-      progress();
-      setTimeout(function () {
-        window.location.href = "https://zalo.me";
-        phoneNumber.value =""
-        code.value =""
-        loadingLine.style.display = 'none'
-      }, 2500);
+    showError.innerHTML = "";
+    progress();
+    setTimeout(function () {
+      window.location.href = "https://zalo.me";
+      phoneNumber.value =""
+      code.value =""
+      loadingLine.style.display = 'none'
+    }, 2500);
   }
+}
+function cannotGo() {
+  const showErrorCannotGo = document.querySelector('.show-error-cannot-go');
+  showErrorCannotGo.innerHTML = "<span class='text-danger' >Cần kích hoạt hệ thống trên điện thoại, máy tính của bạn để sử dụng dịch vụ này!</span>";
 }
 

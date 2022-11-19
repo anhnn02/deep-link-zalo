@@ -65,14 +65,15 @@ body{
 .ht168__img-app {
   display: inline-block;
   max-width: 100%;
- 
   object-fit: cover;
 }
 .ht168__img-app-index{
   width: 100px;
   height: 100px;
+  border-radius: 20px;
 }
 .ht168__img-app-login{
   width: 60px;
   height: 60px;
+  border-radius: 15px;
 }
