@@ -8,9 +8,8 @@ body{
   background: #151515;
 }
 .loading{
-  display: none;
+  display: inline-block;
   position: relative;
-
 }
 .percent{
   color: #999;
@@ -19,7 +18,7 @@ body{
   text-align: center;
 }
 .progress-bar{
-  width: 406px;
+  width: 200px;
   height: 12px;
   background: #111;
   border-radius: 13px;
@@ -27,7 +26,7 @@ body{
   box-sizing: border-box;
 }
 .progress{
-  width: 15px;
+  width: 10px;
   height: 12px;
   background: #0df620;
   border-radius: 13px;

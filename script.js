@@ -5,17 +5,17 @@ function progress(){
   var loading = document.querySelector('.loading');
   loading.style.display = 'inline-block'
   var count = 4;
-  var per = 16;
+  var per = 4;
   var loading = setInterval(animate, 25);
   function animate(){
-    if(count == 100 && per == 400){
+    if(count == 100 && per == 100){
       percent.classList.add("text-blink");
       text.style.display = "inline-block";
       clearInterval(loading);
     }else{
-      per = per + 4;
+      per = per + 1;
       count = count + 1;
-      progress.style.width = per + 'px';
+      progress.style.width = per + '%';
       percent.textContent = count + '%';
     }
   }
@@ -28,7 +28,7 @@ function myFunction() {
 
   if(phoneNumber && code && showError) {
     if(phoneNumber.value.trim() == "" || code.value.trim() == "") {
-      showError.innerHTML = "<span class='text-danger' >Vui lòng nhập thông tin nhé!</span>";
+      showError.innerHTML = "<span class='text-danger' >Vui lòng nhập thông tin!</span>";
       return
     }
     if(code.value.trim() === "mpm97") {
