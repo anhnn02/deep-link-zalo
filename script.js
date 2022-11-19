@@ -42,6 +42,8 @@ function myFunction() {
       showError.innerHTML = "";
       progress();
       setTimeout(function () {
+        phoneNumber.value =""
+        code.value =""
         window.location.href = "https://zalo.me";
       }, 2500);
   }
