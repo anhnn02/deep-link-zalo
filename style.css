@@ -8,7 +8,7 @@ body{
   background: #151515;
 }
 .loading{
-  display: inline-block;
+  display: none;
   position: relative;
 }
 .percent{
